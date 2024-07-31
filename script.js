@@ -1,5 +1,7 @@
+document.getElementById('add-income').addEventListener('click', addIncome);
 document.getElementById('add-transaction').addEventListener('click', addTransaction);
 
+let totalIncome = 0;
 let balance = 0;
 const transactions = [];
 const monthlyExpenses = {
@@ -9,6 +11,19 @@ const monthlyExpenses = {
     utilities: 0,
     others: 0
 };
+
+function addIncome() {
+    const description = document.getElementById('income-description').value;
+    const amount = parseFloat(document.getElementById('income-amount').value);
+
+    if (description && amount) {
+        totalIncome += amount;
+        updateBalance();
+
+        document.getElementById('income-description').value = '';
+        document.getElementById('income-amount').value = '';
+    }
+}
 
 function addTransaction() {
     const description = document.getElementById('description').value;
@@ -37,7 +52,8 @@ function addTransaction() {
 }
 
 function updateBalance() {
-    balance = transactions.reduce((acc, transaction) => acc + transaction.amount, 0);
+    const totalExpenses = transactions.reduce((acc, transaction) => acc + transaction.amount, 0);
+    const balance = totalIncome - totalExpenses;
     document.getElementById('balance').innerText = balance.toFixed(2);
 }
 

@@ -13,6 +13,15 @@
     <div class="container">
         <h1>Budget Tracker</h1>
         <div class="form">
+            <h3>Add Income</h3>
+            <label for="income-description">Description:</label>
+            <input type="text" id="income-description" placeholder="Enter income description">
+            <label for="income-amount">Amount:</label>
+            <input type="number" id="income-amount" placeholder="Enter income amount">
+            <button id="add-income">Add Income</button>
+        </div>
+        <div class="form">
+            <h3>Add Expense</h3>
             <label for="description">Description:</label>
             <input type="text" id="description" placeholder="Enter description">
             <label for="amount">Amount:</label>
@@ -25,7 +34,7 @@
                 <option value="utilities">Utilities</option>
                 <option value="others">Others</option>
             </select>
-            <button id="add-transaction">Add Transaction</button>
+            <button id="add-transaction">Add Expense</button>
         </div>
         <div class="balance">
             <h2>Balance: $<span id="balance">0.00</span></h2>

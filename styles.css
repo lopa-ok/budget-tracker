@@ -11,15 +11,24 @@ body {
 
 .container {
     background: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 80%;
+    max-width: 500px;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form h3 {
+    margin-top: 20px;
 }
 
 .form label {
@@ -32,6 +41,7 @@ h1 {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
+    box-sizing: border-box;
 }
 
 button {
@@ -43,6 +53,7 @@ button {
     border-radius: 5px;
     margin-top: 20px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .balance {
@@ -71,6 +82,7 @@ button {
 .transactions li span {
     font-weight: bold;
 }
+
 .chart-container {
     margin-top: 20px;
 }
