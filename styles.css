@@ -1,0 +1,81 @@
+body {
+    font-family: 'Gaegu', cursive;
+    background-color: #fbefd6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.balance {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.transactions {
+    margin-top: 20px;
+}
+
+.transactions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transactions li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transactions li span {
+    font-weight: bold;
+}
+.chart-container {
+    margin-top: 20px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 300px;
+}
